@@ -1,0 +1,9 @@
+---
+applications:
+- name: ecs-example
+  memory: 64M
+  health-check-type: none
+  no-route: true
+  command: node app.js
+  services:
+  - my_bucket

@@ -1,0 +1,21 @@
+{
+  "comment": [
+    "To run locally, copy this file to local-vcap.json and update the values"
+  ],
+  "services": {
+    "ecs-bucket": [
+      {
+        "name": "my_bucket",
+        "credentials": {
+          "accessKey": "ecs-cf-broker-someguid",
+          "bucket": "ecs-cf-broker-someguid",
+          "endpoint": "https://object.ecstestdrive.com",
+          "namespace": "111111113333111111",
+          "path-style-access": true,
+          "s3Url": "https://ecs-cf-broker-someguid:somesecretkey@object.ecstestdrive.com/ecs-cf-broker-someguid",
+          "secretKey": "somesecretkey"
+        }
+      }
+    ]
+  }
+}
