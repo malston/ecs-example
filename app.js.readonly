@@ -31,18 +31,6 @@ console.log("s3client created...")
 
 
 const run = async () => {
-	// put the data in the ECS bucket
-	try {
-		const putResults = await s3Client.send(new PutObjectCommand({
-			Bucket: creds.bucket,
-			Key: 'sample.txt',
-			Body: 'Hello World!'
-		}));
-		console.log("Successfully created sample.txt");
-	} catch (err) {
-		console.log("Error", err);
-	}
-
 	const streamToString = (stream) =>
 	new Promise((resolve, reject) => {
 		const chunks = [];
@@ -57,7 +45,7 @@ const run = async () => {
 			Key: 'sample.txt'
 		}));
 		const bodyContents = await streamToString(getResults.Body);
-		console.log(bodyContents);
+		console.log('bucket content: ' + bodyContents);
 	} catch (err) {
 		console.log("Error", err);
 	}
