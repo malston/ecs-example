@@ -7,3 +7,5 @@ applications:
   command: node app-readonly.js
   services:
   - my_bucket
+  buildpacks:
+  - nodejs_buildpack_latest
