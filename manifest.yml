@@ -5,7 +5,5 @@ applications:
   health-check-type: none
   no-route: true
   command: node app.js
-  services:
-  - my_bucket
   buildpacks:
   - nodejs_buildpack_latest

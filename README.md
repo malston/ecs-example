@@ -8,7 +8,9 @@ Assuming you have a deployed ECS service broker, create a new service called `my
 
 ```shell
 cf create-service ecs-bucket 5gb my_bucket
-cf push
+cf push ecs-example -f manifest.yml --no-start
+cf bind-service ecs-example my_bucket
+cf restart ecs-example
 ```
 
 You should see messages in the logs like the following:
@@ -28,7 +30,9 @@ Retrieving logs for app ecs-example in org cloudfoundry / space test-app as admi
 To push the read-only version of the app so that the app only reads from the bucket.
 
 ```shell
-cf push -f manifest-readonly.yml
+cf push -f manifest-readonly.yml --no-start
+cf bind-service ecs-example my_bucket
+cf restart ecs-example
 ```
 
 This will read from the same bucket created above.
