@@ -6,6 +6,6 @@ applications:
   no-route: true
   command: node app.js
   services:
-  - my_bucket
+  - my_bucket_63305E7F
   buildpacks:
-  - nodejs_buildpack_latest
+  - nodejs_buildpack
