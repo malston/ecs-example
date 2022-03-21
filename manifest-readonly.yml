@@ -8,4 +8,4 @@ applications:
   services:
   - my_bucket
   buildpacks:
-  - nodejs_buildpack_latest
+  - nodejs_buildpack
